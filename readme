@@ -16,8 +16,43 @@ Step3::::::::
 Lunch ubuntu instance open all traffic --give iam role s3full access 
 first edit config.py file add here all the parameters that we set while launching rds like endpoint, uname and pw
 now, ssh into instance and clone the repo (aws-live)
+install the mysql client with the help of below command 
+then install python commands as below mentioned 
+Now, on ec2 connect to mysql 
+#mysql -h <rds_endpoint> -P 3306 -u admin -p
+give pw you will be into mysql>
+mysql> create database employee;
+mysql> create table employee(empid varchar(20), fname varchar(20), lname varchar(20), pri_skill varchar(20), location varchar(20))
+mysql> use employee 
+Now , start your app with following command 
+#sudo python3 Empapp.py
+Now, copy public ip of ec2 and check the app 
+on app if you put data of employee 
+it will get reflected in S3 as well as in rds 
+go to s3 and check there 
+go to rds and check if the data comes in rds or not with the folowing command 
+#select * from employee 
 
+Step3:::::
+Now, we are checking app with prublic ip but we want to assign domain name to our website 
+We can create free domain on (www.freenom.com) sign up here 
+services > register new domain 
+vijay-aws -- check availabilty and select from here which is free 
+domain name - vijay-aws.tk 
+Now, services > my domain > manage domain > management tools > use custom nameservers (enter below)
 
+Now , go to aws route53 service 
+create hosted zone here 
+domain name = vijay-aws.tk
+create 
+it will create NS record 
+you will get 4 value in NS , copy this fields on freenom > use custom nameservers 
+Now, create record set 
+name == wwww
+value = public ip of instance 
+
+Result:::::::
+Now if you put www.vijay-aws.tk in browser you will see your website 
 
 sudo apt-get update
 # For Sql-client
