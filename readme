@@ -1,5 +1,17 @@
 Title: Project to deploy web app on aws -- on app if we put data it will get stored in rds 
 
+Step1::::::::
+Launch mysql RDS 
+DB instance identifier - employee
+Master username - admin
+PW - password
+public access - yes 
+disable autoscaling 
+
+Step2::::::::
+Creation of s3 bucket 
+bucket name - vijay1999gawate
+
 
 sudo apt-get update
 # For Sql-client
