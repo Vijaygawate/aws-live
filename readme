@@ -1,3 +1,6 @@
+Title: Project to deploy web app on aws -- on app if we put data it will get stored in rds 
+
+
 sudo apt-get update
 # For Sql-client
 sudo apt-get install mysql-client
