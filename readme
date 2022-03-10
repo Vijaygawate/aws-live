@@ -13,7 +13,7 @@ Creation of s3 bucket
 bucket name - vijay1999gawate
 
 Step3::::::::
-Lunch ubuntu instance open all traffic 
+Lunch ubuntu instance open all traffic --give iam role s3full access 
 first edit config.py file add here all the parameters that we set while launching rds like endpoint, uname and pw
 now, ssh into instance and clone the repo (aws-live)
 
